@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+<!-- ---------------------------------------------------------------------------- -->
+
+{% block title %}
+Homepage
+{% endblock %}
+
+<!-- ---------------------------------------------------------------------------- -->
+
+{% block header %}
+<div class="header">
+  Rental Price Predictor
+</div>
+{% endblock %}
+
+<!-- ---------------------------------------------------------------------------- -->
+
+{% block input %}
+{% include "form.html" %}
+{% endblock %}
+
+<!-- ---------------------------------------------------------------------------- -->
+
+{% block output %}
+{% if proba %}
+<div class="output border border-primary border-3">
+  Rental Price for your House: ₹{{ proba }}
+</div>
+{% endif %}
+{% endblock %}

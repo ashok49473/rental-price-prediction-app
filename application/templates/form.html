@@ -1,0 +1,190 @@
+<form method="POST" action="{{ url_for('app.predict') }}">
+
+    <!-- First row -->
+    <div class="form-row top-buffer">
+        <!-- (1,1) -->
+        <div class="form-group col-md-4">
+            <label for="bedroom"><b>No. of Bedrooms</b></label>
+            <input type="number" name="bedroom" class="form-control" required="required" min="0">
+        </div>
+
+        <!-- (1,2) -->
+        <div class="form-group col-md-4">
+            <label for='layout_type'><b>Layout type</b></label>
+            <select name='layout_type' class='form-control'>
+                <option value="BHK">BHK</option>
+                <option value="RK">RK</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <!-- (1, 3) -->
+        <div class="form-group col-md-4">
+            <label for='city'><b>City</b></label>
+            <select name='city' class='form-control'>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    </div>
+    <!-- End of First row -->
+
+    <!-- Second row -->
+    <div class="form-row top-buffer">
+        <!-- (2,1) -->
+        <div class="form-group col-md-4">
+            <label for="bathroom"><b>No. of Bathrooms</b></label>
+            <input type="number" name="bathroom" class="form-control" required="required" min="0">
+        </div>
+
+        <!-- (2,2) -->
+        <div class="form-group col-md-4">
+            <label for='seller_type'><b>Seller type</b></label>
+            <select name='seller_type' class='form-control'>
+                <option value="OWNER">OWNER</option>
+                <option value="AGENT">AGENT</option>
+                <option value="BUILDER">BUILDER</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <!-- (2,3) -->
+        <div class="form-group col-md-4">
+            <label for='property_type'><b>Property type</b></label>
+            <select name='property_type' class='form-control'>
+                <option value="Apartment">Apartment</option>
+                <option value="Studio Apartment">Studio Apartment</option>
+                <option value="Independent House">Independent House</option>
+                <option value="Independent Floor">Independent Floor</option>
+                <option value="Villa">Villa</option>
+                <option value="Penthouse">Penthouse</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    </div>
+    <!-- End of Second row -->
+
+    <!-- Third row -->
+    <div class="form-row top-buffer">
+        <!-- (3, 1) -->
+        <div class="form-group col-md-4">
+            <label for="area"><b>Area (Sq. ft)</b></label>
+            <input type="number" name="area" class="form-control" required="required" min="0">
+        </div>
+
+        <!-- (3,2) -->
+        <div class="form-group col-md-4">
+            <label for='furnish_type'><b>Furnish type</b></label>
+            <select name='furnish_type' class='form-control'>
+                <option value="Furnished">Furnished</option>
+                <option value="Semi-Furnished">Semi-Furnished</option>
+                <option value="Unfurnished">Unfurnished</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <!-- (3,3) -->
+        <div class="form-group col-md-4">
+            <label for='locality'><b>Locality</b></label>
+            <select name='locality' class='form-control'>
+                <option value="Wagholi">Wagholi</option>
+                <option value="Hinjewadi">Hinjewadi</option>
+                <option value="Wakad">Wakad</option>
+                <option value="Hadapsar">Hadapsar</option>
+                <option value="Kharadi">Kharadi</option>
+                <option value="Bavdhan">Bavdhan</option>
+                <option value="Pimple Saudagar">Pimple Saudagar</option>
+                <option value="Dhanori">Dhanori</option>
+                <option value="Wadgaon Sheri">Wadgaon Sheri</option>
+                <option value="Baner">Baner</option>
+                <option value="Thane West">Thane West</option>
+                <option value="Kharghar">Kharghar</option>
+                <option value="Ulwe">Ulwe</option>
+                <option value="Mira Road East">Mira Road East</option>
+                <option value="Kandivali East">Kandivali East</option>
+                <option value="Ghansoli">Ghansoli</option>
+                <option value="Dombivali">Dombivali</option>
+                <option value="Andheri East">Andheri East</option>
+                <option value="Kalyan West">Kalyan West</option>
+                <option value="Dombivli (West)">Dombivli (West)</option>
+                <option value="New Town">New Town</option>
+                <option value="Kasba">Kasba</option>
+                <option value="Rajarhat">Rajarhat</option>
+                <option value="Keshtopur">Keshtopur</option>
+                <option value="Garia">Garia</option>
+                <option value="Tollygunge">Tollygunge</option>
+                <option value="Behala">Behala</option>
+                <option value="Patuli">Patuli</option>
+                <option value="VIP Nagar">VIP Nagar</option>
+                <option value="Tagore Park">Tagore Park</option>
+                <option value="Kondapur">Kondapur</option>
+                <option value="Kukatpally">Kukatpally</option>
+                <option value="Madhapur">Madhapur</option>
+                <option value="Begumpet">Begumpet</option>
+                <option value="Manikonda">Manikonda</option>
+                <option value="Gachibowli">Gachibowli</option>
+                <option value="Miyapur">Miyapur</option>
+                <option value="Ameerpet">Ameerpet</option>
+                <option value="Nallakunta">Nallakunta</option>
+                <option value="Chandanagar">Chandanagar</option>
+                <option value="Saket">Saket</option>
+                <option value="Chattarpur">Chattarpur</option>
+                <option value="New Ashok Nagar">New Ashok Nagar</option>
+                <option value="Uttam Nagar">Uttam Nagar</option>
+                <option value="Sheikh Sarai">Sheikh Sarai</option>
+                <option value="Patel Nagar">Patel Nagar</option>
+                <option value="Preet Vihar">Preet Vihar</option>
+                <option value="Lajpat Nagar">Lajpat Nagar</option>
+                <option value="Paschim Vihar">Paschim Vihar</option>
+                <option value="laxmi nagar">laxmi nagar</option>
+                <option value="Velachery">Velachery</option>
+                <option value="Sholinganallur">Sholinganallur</option>
+                <option value="Thiruvanmiyur">Thiruvanmiyur</option>
+                <option value="Madipakkam">Madipakkam</option>
+                <option value="Choolaimedu">Choolaimedu</option>
+                <option value="Medavakkam">Medavakkam</option>
+                <option value="Perumbakkam">Perumbakkam</option>
+                <option value="Perungudi">Perungudi</option>
+                <option value="Vadapalani">Vadapalani</option>
+                <option value="Pallikaranai">Pallikaranai</option>
+                <option value="HSR Layout">HSR Layout</option>
+                <option value="Mahadevapura">Mahadevapura</option>
+                <option value="BTM Layout">BTM Layout</option>
+                <option value="Marathahalli">Marathahalli</option>
+                <option value="Indira Nagar">Indira Nagar</option>
+                <option value="Electronic City Phase 1">Electronic City Phase 1</option>
+                <option value="Whitefield">Whitefield</option>
+                <option value="CV Raman Nagar">CV Raman Nagar</option>
+                <option value="Electronics City">Electronics City</option>
+                <option value="Krishnarajapura">Krishnarajapura</option>
+                <option value="Bopal">Bopal</option>
+                <option value="Gota">Gota</option>
+                <option value="Near Nirma University On SG Highway">Near Nirma University On SG Highway</option>
+                <option value="Shela">Shela</option>
+                <option value="Jodhpur">Jodhpur</option>
+                <option value="Chandkheda">Chandkheda</option>
+                <option value="Motera">Motera</option>
+                <option value="Bodakdev">Bodakdev</option>
+                <option value="Prahlad Nagar">Prahlad Nagar</option>
+                <option value="Makarba">Makarba</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    </div>
+    <!-- End of Third row -->
+
+    <!-- Button row -->
+    <div class="form-row top-buffer">
+        <div class="form-group col-sm-6 offset-sm-3">
+            <button type="submit" class="btn btn-success btn-block"><b>Predict</b></button>
+        </div>
+    </div>
+    <!-- End of Button -->
+</form>
